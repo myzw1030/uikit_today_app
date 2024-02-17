@@ -32,7 +32,6 @@ class ReminderListViewController: UICollectionViewController {
         var snapshot = Snapshot()
         // スナップショットにセクション追加
         snapshot.appendSections([0])
-        var reminderTitles = [String]()
         snapshot.appendItems(Reminder.sampleData.map { $0.title})
         dataSource.apply(snapshot)
         // データソースをcollectionViewに割り当てる

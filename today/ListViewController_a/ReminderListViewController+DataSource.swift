@@ -26,5 +26,9 @@ extension ReminderListViewController {
         contentConfiguration.secondaryTextProperties.font = UIFont.preferredFont(forTextStyle: .caption1)
         // 設定したコンテンツをセルに適用
         cell.contentConfiguration = contentConfiguration
+        
+        var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
+        backgroundConfiguration.backgroundColor = .todayDetailCellTint
+        cell.backgroundConfiguration = backgroundConfiguration
     }
 }

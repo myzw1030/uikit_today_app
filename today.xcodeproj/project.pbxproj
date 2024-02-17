@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CE3305172B80B489002712D8 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3305162B80B489002712D8 /* ReminderListViewController+DataSource.swift */; };
+		CE3305192B80EC23002712D8 /* UIColor+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE3305182B80EC23002712D8 /* UIColor+Today.swift */; };
 		CE784B732B8078140004DE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B722B8078140004DE72 /* AppDelegate.swift */; };
 		CE784B752B8078140004DE72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B742B8078140004DE72 /* SceneDelegate.swift */; };
 		CE784B772B8078140004DE72 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B762B8078140004DE72 /* ReminderListViewController.swift */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		CE3305162B80B489002712D8 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
+		CE3305182B80EC23002712D8 /* UIColor+Today.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIColor+Today.swift"; path = "../../../../Downloads/DisplayingCellInfo/StartingProject/Today/Models/UIColor+Today.swift"; sourceTree = "<group>"; };
 		CE784B6F2B8078140004DE72 /* today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE784B722B8078140004DE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE784B742B8078140004DE72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				CE784BA32B807B060004DE72 /* Reminder.swift */,
+				CE3305182B80EC23002712D8 /* UIColor+Today.swift */,
 				CE784BA52B809B5A0004DE72 /* Date+Today.swift */,
 			);
 			path = Models;
@@ -283,6 +286,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE3305192B80EC23002712D8 /* UIColor+Today.swift in Sources */,
 				CE784B772B8078140004DE72 /* ReminderListViewController.swift in Sources */,
 				CE784BA62B809B5A0004DE72 /* Date+Today.swift in Sources */,
 				CE784B732B8078140004DE72 /* AppDelegate.swift in Sources */,
