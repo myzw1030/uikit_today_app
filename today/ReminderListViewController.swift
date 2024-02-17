@@ -14,14 +14,14 @@ class ReminderListViewController: UICollectionViewController {
     typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
     // UICollectionViewのデータソースを保持する変数
     var dataSource: DataSource!
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // collectionViewのレイアウトを設定
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
-        // セルの登録
+        // リストのセルにどのように表示するかを登録
         let cellRegistration = UICollectionView.CellRegistration {
             (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
             // サンプルデータからリマインダーの情報を取得
@@ -33,7 +33,7 @@ class ReminderListViewController: UICollectionViewController {
             // 設定したコンテンツをセルに適用
             cell.contentConfiguration = contentConfiguration
         }
-        // データソースを初期化し、セルの設定方法を定義
+        // UICollectionViewに表示するデータを提供
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
             // セルをキューから取得し、設定したレジストレーションを使用してセルを構成
@@ -62,6 +62,6 @@ class ReminderListViewController: UICollectionViewController {
         // 設定したリストのレイアウトを返す
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
-
+    
 }
 
