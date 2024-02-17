@@ -18,6 +18,8 @@
 		CE784B962B8078150004DE72 /* todayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B952B8078150004DE72 /* todayUITestsLaunchTests.swift */; };
 		CE784BA42B807B070004DE72 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784BA32B807B060004DE72 /* Reminder.swift */; };
 		CE784BA62B809B5A0004DE72 /* Date+Today.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784BA52B809B5A0004DE72 /* Date+Today.swift */; };
+		CE784BA92B80AAB00004DE72 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784BA82B80AAB00004DE72 /* ReminderListViewController.swift */; };
+		CE784BAB2B80AAED0004DE72 /* ReminderListViewController+DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784BAA2B80AAED0004DE72 /* ReminderListViewController+DataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		CE784B952B8078150004DE72 /* todayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		CE784BA32B807B060004DE72 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 		CE784BA52B809B5A0004DE72 /* Date+Today.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Today.swift"; sourceTree = "<group>"; };
+		CE784BA82B80AAB00004DE72 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
+		CE784BAA2B80AAED0004DE72 /* ReminderListViewController+DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReminderListViewController+DataSource.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +107,7 @@
 		CE784B712B8078140004DE72 /* today */ = {
 			isa = PBXGroup;
 			children = (
+				CE784BA72B80AA920004DE72 /* ListViewController */,
 				CE784BA22B807ACA0004DE72 /* Models */,
 				CE784B722B8078140004DE72 /* AppDelegate.swift */,
 				CE784B742B8078140004DE72 /* SceneDelegate.swift */,
@@ -139,6 +144,15 @@
 				CE784BA52B809B5A0004DE72 /* Date+Today.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		CE784BA72B80AA920004DE72 /* ListViewController */ = {
+			isa = PBXGroup;
+			children = (
+				CE784BA82B80AAB00004DE72 /* ReminderListViewController.swift */,
+				CE784BAA2B80AAED0004DE72 /* ReminderListViewController+DataSource.swift */,
+			);
+			path = ListViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,6 +290,8 @@
 				CE784BA62B809B5A0004DE72 /* Date+Today.swift in Sources */,
 				CE784B732B8078140004DE72 /* AppDelegate.swift in Sources */,
 				CE784B752B8078140004DE72 /* SceneDelegate.swift in Sources */,
+				CE784BA92B80AAB00004DE72 /* ReminderListViewController.swift in Sources */,
+				CE784BAB2B80AAED0004DE72 /* ReminderListViewController+DataSource.swift in Sources */,
 				CE784BA42B807B070004DE72 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
