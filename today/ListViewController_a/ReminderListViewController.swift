@@ -8,10 +8,7 @@
 import UIKit
 
 class ReminderListViewController: UICollectionViewController {
-    // データソースの型を定義
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
-    // スナップショット定義
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+
     // UICollectionViewのデータソースを保持する変数
     var dataSource: DataSource!
     
@@ -21,18 +18,9 @@ class ReminderListViewController: UICollectionViewController {
         // collectionViewのレイアウトを設定
         let listLayout = listLayout()
         collectionView.collectionViewLayout = listLayout
-        // リストのセルにどのように表示するかを登録
-        let cellRegistration = UICollectionView.CellRegistration {
-            (cell: UICollectionViewListCell, indexPath: IndexPath, itemIdentifier: String) in
-            // サンプルデータからリマインダーの情報を取得
-            let reminder = Reminder.sampleData[indexPath.item]
-            // セルのコンテンツ設定
-            var contentConfiguration = cell.defaultContentConfiguration()
-            // リマインダーのタイトルをセルに設定
-            contentConfiguration.text = reminder.title
-            // 設定したコンテンツをセルに適用
-            cell.contentConfiguration = contentConfiguration
-        }
+        
+        let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
+
         // UICollectionViewに表示するデータを提供
         dataSource = DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in

@@ -8,5 +8,6 @@
 import UIKit
 
 extension ReminderListViewController {
-    
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
 }
