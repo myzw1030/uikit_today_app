@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		CE784B732B8078140004DE72 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B722B8078140004DE72 /* AppDelegate.swift */; };
 		CE784B752B8078140004DE72 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B742B8078140004DE72 /* SceneDelegate.swift */; };
-		CE784B772B8078140004DE72 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B762B8078140004DE72 /* ViewController.swift */; };
+		CE784B772B8078140004DE72 /* ReminderListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B762B8078140004DE72 /* ReminderListViewController.swift */; };
 		CE784B7A2B8078140004DE72 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE784B782B8078140004DE72 /* Main.storyboard */; };
 		CE784B7C2B8078150004DE72 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE784B7B2B8078150004DE72 /* Assets.xcassets */; };
 		CE784B7F2B8078150004DE72 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE784B7D2B8078150004DE72 /* LaunchScreen.storyboard */; };
 		CE784B8A2B8078150004DE72 /* todayTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B892B8078150004DE72 /* todayTests.swift */; };
 		CE784B942B8078150004DE72 /* todayUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B932B8078150004DE72 /* todayUITests.swift */; };
 		CE784B962B8078150004DE72 /* todayUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784B952B8078150004DE72 /* todayUITestsLaunchTests.swift */; };
+		CE784BA42B807B070004DE72 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE784BA32B807B060004DE72 /* Reminder.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +40,7 @@
 		CE784B6F2B8078140004DE72 /* today.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = today.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE784B722B8078140004DE72 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CE784B742B8078140004DE72 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		CE784B762B8078140004DE72 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		CE784B762B8078140004DE72 /* ReminderListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderListViewController.swift; sourceTree = "<group>"; };
 		CE784B792B8078140004DE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		CE784B7B2B8078150004DE72 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE784B7E2B8078150004DE72 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -49,6 +50,7 @@
 		CE784B8F2B8078150004DE72 /* todayUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = todayUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE784B932B8078150004DE72 /* todayUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayUITests.swift; sourceTree = "<group>"; };
 		CE784B952B8078150004DE72 /* todayUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todayUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		CE784BA32B807B060004DE72 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,9 +101,10 @@
 		CE784B712B8078140004DE72 /* today */ = {
 			isa = PBXGroup;
 			children = (
+				CE784BA22B807ACA0004DE72 /* Models */,
 				CE784B722B8078140004DE72 /* AppDelegate.swift */,
 				CE784B742B8078140004DE72 /* SceneDelegate.swift */,
-				CE784B762B8078140004DE72 /* ViewController.swift */,
+				CE784B762B8078140004DE72 /* ReminderListViewController.swift */,
 				CE784B782B8078140004DE72 /* Main.storyboard */,
 				CE784B7B2B8078150004DE72 /* Assets.xcassets */,
 				CE784B7D2B8078150004DE72 /* LaunchScreen.storyboard */,
@@ -125,6 +128,14 @@
 				CE784B952B8078150004DE72 /* todayUITestsLaunchTests.swift */,
 			);
 			path = todayUITests;
+			sourceTree = "<group>";
+		};
+		CE784BA22B807ACA0004DE72 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CE784BA32B807B060004DE72 /* Reminder.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,9 +269,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CE784B772B8078140004DE72 /* ViewController.swift in Sources */,
+				CE784B772B8078140004DE72 /* ReminderListViewController.swift in Sources */,
 				CE784B732B8078140004DE72 /* AppDelegate.swift in Sources */,
 				CE784B752B8078140004DE72 /* SceneDelegate.swift in Sources */,
+				CE784BA42B807B070004DE72 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +454,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PR7RT2PWDJ;
+				DEVELOPMENT_TEAM = XFH54DB7X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -470,7 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = PR7RT2PWDJ;
+				DEVELOPMENT_TEAM = XFH54DB7X8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = today/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
