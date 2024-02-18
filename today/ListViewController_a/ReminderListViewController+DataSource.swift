@@ -9,14 +9,14 @@ import UIKit
 
 extension ReminderListViewController {
     // データソースの型を定義
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, String>
+    typealias DataSource = UICollectionViewDiffableDataSource<Int, Reminder.ID>
     // スナップショット定義
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, String>
+    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
     
     // セルの表示内容を定義するハンドラー
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: String) {
+    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
         // サンプルデータから対応するリマインダーを取得
-        let reminder = Reminder.sampleData[indexPath.item]
+        let reminder = reminders[indexPath.item]
         // セルのテキストコンテンツ設定
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title // リマインダーのタイトルをセルに設定

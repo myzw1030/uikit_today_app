@@ -11,6 +11,8 @@ class ReminderListViewController: UICollectionViewController {
 
     // UICollectionViewのデータソースを保持する変数
     var dataSource: DataSource!
+    // サンプルデータで配列を初期化
+    var reminders: [Reminder] = Reminder.sampleData
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,7 +25,7 @@ class ReminderListViewController: UICollectionViewController {
 
         // UICollectionViewに表示するデータを提供
         dataSource = DataSource(collectionView: collectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: String) in
+            (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
             // セルをキューから取得し、設定したレジストレーションを使用してセルを構成
             return collectionView.dequeueConfiguredReusableCell(
                 using: cellRegistration, for: indexPath, item: itemIdentifier)
@@ -32,7 +34,7 @@ class ReminderListViewController: UICollectionViewController {
         var snapshot = Snapshot()
         // スナップショットにセクション追加
         snapshot.appendSections([0])
-        snapshot.appendItems(Reminder.sampleData.map { $0.title})
+        snapshot.appendItems(reminders.map { $0.title})
         dataSource.apply(snapshot)
         // データソースをcollectionViewに割り当てる
         collectionView.dataSource = dataSource
