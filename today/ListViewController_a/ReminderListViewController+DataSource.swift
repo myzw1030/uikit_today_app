@@ -16,7 +16,7 @@ extension ReminderListViewController {
     // セルの表示内容を定義するハンドラー
     func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
         // サンプルデータから対応するリマインダーを取得
-        let reminder = reminders[indexPath.item]
+        let reminder = reminder(withId: id)
         // セルのテキストコンテンツ設定
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title // リマインダーのタイトルをセルに設定
@@ -35,6 +35,26 @@ extension ReminderListViewController {
         backgroundConfiguration.backgroundColor = .todayListCellBackground
         cell.backgroundConfiguration = backgroundConfiguration
     }
+    
+    // Reminderを管理する
+    func reminder(withId id: Reminder.ID) -> Reminder {
+        let index = reminders.indexOfReminder(withId: id)
+        return reminders[index]
+    }
+    
+    // 指定されたReminderオブジェクトで既存のReminderを更新する
+    func updateReminder(_ reminder: Reminder) {
+        let index = reminders.indexOfReminder(withId: reminder.id)
+        reminders[index] = reminder
+    }
+    
+    // リマインダーを完了させる
+    func completeReminder(withId id: Reminder.ID) {
+        var reminder = reminder(withId: id)
+        reminder.isComplete.toggle()
+        updateReminder(reminder)
+    }
+    
     // 完了ボタンのカスタムビュー設定を生成
     private func doneButtonConfiguration(for reminder: Reminder) -> UICellAccessory.CustomViewConfiguration {
         let symbolName = reminder.isComplete ? "circle.fill" : "circle" // 完了状態に応じたアイコンを選択
